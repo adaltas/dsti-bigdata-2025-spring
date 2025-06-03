@@ -11,11 +11,11 @@
 
 **Before you start**
 
-As a member of a group, you have permission to work within resources named after your group name. 
-To make it easier to reference your group name in scripts and commands, you can create an environment variable called GROUP using this script: 
+As a member of a group, you have permission to work within resources named after your group name.
+To make it easier to reference your group name in scripts and commands, you can create an environment variable called GROUP using this script:
 
 ```bash
-echo "export GROUP=<group> >> ~/.bashrc
+echo "export GROUP=<group>" >> ~/.bashrc
 source .bashrc
 ```
 
@@ -59,7 +59,7 @@ The WordCount example is also located in the MapReduce example JAR. It takes sev
     wordcount /education/$GROUP/$USER/lab2 \
     /education/$GROUP/$USER/lab2/output-moby-dick
    ```
-   
+
 3. Check out the output directory: `/education/$GROUP/$USER/lab2/output-moby-dick`
 
 ---
@@ -115,12 +115,11 @@ The configuration depends on your OS:
     network.negotiate-auth.trusted-uris = .au.adaltas.cloud
     ```
 
-- On Windows, the installation is more tricky. Follow this article: [Kerberos and Spnego authentication on Windows with Firefox](https://www.adaltas.com/en/2019/11/04/windows-krb5-client-spnego/).
+- On Windows, the installation is more tricky. Follow this article: [Kerberos and Spnego authentication on Windows with Firefox](https://www.adaltas.com/en/2019/11/04/windows-krb5-client-spnego/). **NOTE: when interacting with the MIT-Kerberos gui, the value of your username is `<username>@AU.ADALTAS.CLOUD`, and the value of your password is the one you used to connect with SSH**
 
-Once that your computer and your Firefox browser are configured and that you have a Kerberos ticket:
+Once your computer and your Firefox browser are configured and you have a Kerberos ticket:
 
 1. Open the page http://yarn-rm-1.au.adaltas.cloud:8088/ui2/#/yarn-apps/apps
 2. Run the Pi example once again
 3. Locate your application in the UI and check resource usage
 4. Rerun the example several times and see the locations of the containers changing
-
