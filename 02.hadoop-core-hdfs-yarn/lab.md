@@ -68,7 +68,15 @@ The WordCount example is also located in the MapReduce example JAR. It takes sev
 
 ### Setting up password-less SSH
 
-Follow tutorial: [How to Setup Passwordless SSH Login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)
+Follow tutorial: [How to Setup Passwordless SSH Login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)  
+**NOTE:** Setting up passwordless ssh will bypass the automatic kerberos ticket renewal that happens when using a password to log in. If you receive an error when interacting with the cluster that involves `[TOKEN,KERBEROS]` or any other error mentioning kerberos, first try renewing your ticket on the edge node.
+
+```bash
+# Use kinit without flags to update ticket
+kinit
+# #> denotes standard output
+#> Password for <user>:<enter-password-here>
+```
 
 ### Accessing Hadoop Web UIs using Kerberos
 
