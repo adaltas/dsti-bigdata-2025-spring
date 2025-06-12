@@ -71,9 +71,13 @@ duration: 1h
 
 1. Download the dataset from [NYC Taxi Fare Dataset in Kaggle](https://www.kaggle.com/datasets/diishasiing/revenue-for-cab-drivers?resource=download), and place the CSV file into `nifi-126` container.
 
+   ```bash
+      docker cp <target_file_path> <container_id>:<target_dir_path>
+   ```
+
 2. Use at least one "UpdateRecord" processor to do basic transformation with the FlowFile.
 
-   For example, you could use 2 "UpdateRecord" processors to create a new column with the summation of the existed 2 columns.
+   For example, you could use 2 "UpdateRecord" processors to create a new column with the summation of the existed 2 columns. Check out this [thread](https://stackoverflow.com/questions/59047115/add-two-columns-together-using-apache-nifi).
 
 3. Use PutDatabaseRecord processor to write the data to Postgres database.
 
