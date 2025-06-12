@@ -46,7 +46,7 @@
     ```bash
     docker exec -it kafka-data-producer /bin/sh
     # Inside the container:
-    python producer.py \
+    python kafka_producer.py \
         --brokers kafka01:9092,kafka02:9092 \
         --topic demo-nyc-taxi-fare \
         --csv data.csv \

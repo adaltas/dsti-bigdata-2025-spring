@@ -91,9 +91,9 @@ duration: 1h
 
       #### and in the controller of "DBCPConnectionPool"
 
-      - Database Connection URL: `jdbc:postgresql://\<ip addr of the container>:5432/dsti_db`
+      - Database Connection URL: `jdbc:postgresql://<ip addr of the container>:5432/dsti_db`
       - Database Driver Class Name: `org.postgresql.Driver`
-      - Database Driver Location(s): `/opt/nifi/nifi-current/lib/postgresql-42.7.3.jar`
+      - Database Driver Location(s): `/opt/nifi/nifi-current/lib/postgresql-42.2.24.jar`
       - Database User: `<postgres username>`
       - Password: `<postgres password>`
 
